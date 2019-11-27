@@ -38,8 +38,7 @@ for i in range(true_k):
         print(' %s' % terms[ind]),
     print
     
-##visualization
-
+#visualization
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
@@ -57,8 +56,7 @@ labels_color_map = {
 pca_num_components = 2
 tsne_num_components = 2
 
-centers = np.array(model.cluster_centers_)
-print(centers)
+centers = np.array(order_centroids)
 plt.scatter(centers[:,0], centers[:,1], marker="x", color='r')
 
 labels = model.fit_predict(X)
